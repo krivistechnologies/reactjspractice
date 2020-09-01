@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add React in One Minute</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+
+    <script type="text/babel">
+      /* Simple React code to display Hello from Reactjs */
+      ReactDOM.render(<h1>Hello Reactjs</h1>, document.getElementById("root"));
+
+      /* React component using function */
+      function Message() {
+        return (
+          <div>
+            <h1>Hello Reactjs from Function component </h1>
+          </div>
+        );
+      }
+      ReactDOM.render(<Message />, document.getElementById("message"));
+
+      /* React component usign class */
+      class Greeting extends React.Component {
+        render() {
+          return (
+            <div>
+              <h1>Hello Reactjs from class component </h1>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(<Greeting />, document.getElementById("greeting"));
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="message"></div>
+    <div id="greeting"></div>
+  </body>
+</html>
